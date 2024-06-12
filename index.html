@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/nurasorihu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/mitokaxaya/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기말 상단 레이아웃</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+        .nav_logo img {
+            width: 180px;
+            height: 60px;
+        }
+        .nav_menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav_menu li {
+            display: inline;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .movie {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: 1px solid #444;
+            background-color: #333;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .movie-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .movie img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .movie-info {
+            margin-left: 20px;
+            flex: 1;
+        }
+        .movie h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        .movie p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .trailer {
+            margin-top: 10px;
+            text-align: center; /* 가운데 정렬 */
+        }
+        .trailer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .trailer iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+<style id="jsbin-css">
+:root {
+  --accent-color: #ff0000; 
+  --text-color: #f0f4f5;
+  --background-color: #0b002b;}
+
+.body {
+  margin: 0;
+  font-family: 'Montserrat';}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 8px 12px;}
+
+.nav_logo {
+  font-size: 24px;
+  color: var(--text-color);}
+
+.nav_logo i {
+  color: var(--accent-color);}
+
+.nav_logo span {
+  color: var(--accent-color);}
+
+.nav_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;}
+
+.nav_menu li {
+  padding: 8px 12px;}
+
+.nav_menu li:hover {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+  border-radius: 4px;}
+
+.nav_menu li a:hover {
+  color: var(--background-color);}
+
+.nav_icons {
+  display: flex;
+  color: #7dc0ff;
+  list-style: none;
+  padding-left: 0;}
+
+
+</style>
+<style id="jsbin-css">
+:root {
+  --accent-color: #ff0000; 
+  --text-color: #f0f4f5;
+  --background-color: #0b002b;}
+
+.body {
+  margin: 0;
+  font-family: 'Montserrat';}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 8px 12px;}
+
+.nav_logo {
+  font-size: 24px;
+  color: var(--text-color);}
+
+.nav_logo i {
+  color: var(--accent-color);}
+
+.nav_logo span {
+  color: var(--accent-color);}
+
+.nav_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;}
+
+.nav_menu li {
+  padding: 8px 12px;}
+
+.nav_menu li:hover {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+  border-radius: 4px;}
+
+.nav_menu li a:hover {
+  color: var(--background-color);}
+
+.nav_icons {
+  display: flex;
+  color: #7dc0ff;
+  list-style: none;
+  padding-left: 0;}
+
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav_logo">
+            <a href="#" class="home-icon"><img src="https://i.imgur.com/MruF48m.png" alt="Home"></a>
+        </div>
+        <ul class="nav_menu">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">드라마</a></li>
+            <li><a href="#">애니메이션</a></li>
+            <li><a href="#">뮤지컬</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- 첫 번째 영화 -->
+        <div class="movie">
+            <div class="movie-content">
+                <img src="https://i.ibb.co/YtHCR6n/image.jpg" alt="인사이드아웃 포스터">
+                <div class="movie-info">
+                    <h2>인사이드아웃</h2>
+                    <p>개봉: 2015.07.09</p>
+                    <p>등급: 전체 관람가</p>
+                    <p>장르: 애니메이션, 코미디</p>
+                    <p>국가: 미국</p>
+                    <p>러닝타임: 102분</p>
+                    <p>우연한 실수로 ‘기쁨’과 ‘슬픔’이 본부를 이탈하게 되자 '라일리’의 마음 속에 큰 변화가 찾아온다. '라일리'가 예전의 모습을 되찾기 위해서는 ‘기쁨’과 ‘슬픔’이 본부로 돌아가야만 한다! 그러나 엄청난 기억들이 저장되어 있는 머릿속 세계에서 본부까지 가는 길은 험난하기만 한데… 과연, ‘라일리’는 다시 행복해질 수 있을까? 지금 당신의 머릿속에서 벌어지는 놀라운 일! 하루에도 몇번씩 변하는 감정의 비밀이 밝혀진다!</p>
+                </div>
+            </div>
+            <div class="trailer">
+                <h3>예고편</h3>
+                <iframe src="https://www.youtube.com/embed/1KGZtWbZtq8" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- 두 번째 영화 -->
+        <div class="movie">
+            <div class="movie-content">
+                <img src="https://i.ibb.co/VJtXWrP/image.jpg" alt="엘리멘탈 포스터">
+                <div class="movie-info">
+                    <h2>엘리멘탈</h2>
+                    <p>개봉: 2023.06.14</p>
+                    <p>등급: 전체 관람가</p>
+                    <p>장르: 애니메이션</p>
+                    <p>국가: 미국</p>
+                    <p>러닝타임: 109분</p>
+                    <p>배급: 월트디즈니 컴퍼니 코리아</p>
+                    <p>불, 물, 공기, 흙 4개의 원소들이 살고 있는 ‘엘리멘트 시티’ 재치 있고 불처럼 열정 넘치는 ‘앰버'는 어느 날 우연히 유쾌하고 감성적이며 물 흐르듯 사는 '웨이드'를 만나 특별한 우정을 쌓으며, 지금껏 믿어온 모든 것들이 흔들리는 새로운 경험을 하게 되는데... 웰컴 투 ‘엘리멘트 시티’!</p>
+                </div>
+            </div>
+            <div class="trailer">
+                <h3>예고편</h3>
+                <iframe src="https://www.youtube.com/embed/BOqFRHCrN-k" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- 세 번째 영화 -->
+        <div class="movie">
+            <div class="movie-content">
+                <img src="https://i.ibb.co/sQnHfLH/image.jpg" alt="몬스터주식회사3D 포스터">
+                <div class="movie-info">
+                    <h2>몬스터주식회사3D</h2>
+                    <p>개봉: 2001.12.20</p>
+                    <p>등급: 전체 관람가</p>
+                    <p>장르: 애니메이션, 코미디, 가족, 모험, 판타지</p>
+                    <p>국가: 미국</p>
+                    <p>러닝타임: 92분</p>
+                    <p>어두운 밤이 오면, 아이들의 벽장 너머 그들이 나타난다! 3D로 돌아온 최강 몬스터 콤비! 호탕한 설리와 재치만점 마이크는 몬스터 주식회사 겁주기 팀의 최우수 콤비다. 매일 밤 투철한 직업정신으로 인간 세계로 통하는 벽장 문을 열던 설리와 마이크 콤비는 어느 날 일생일대의 실수를 저지른다. 덜 닫힌 벽장 문 사이로 인간아이 ‘부’가 몬스터 세계에 침입한 것! 설리와 마이크는 ‘부’를 인간세계로 돌려보내고 사건을 조용히 수습하려 하지만 ‘부’는 ‘설리’를 무서워하기는커녕 애완 야옹이쯤으로 생각하고 쫄래쫄래 따라다닌다. ‘부’의 침입이 발각되자, 몬스터 주식회사는 발칵 뒤집히고 마는데… 1등 사원에서 하루 아침에 회사에서 쫓겨날 위기에 처한 설리와 마이크 콤비는 과연 ‘부’를 무사히 인간세계로 돌려보낼 수 있을까?</p>
+                </div>
+            </div>
+            <div class="trailer">
+                <h3>예고편</h3>
+                <iframe src="https://www.youtube.com/embed/Cmmux9XUKJo" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>@22457001 고명선</p>
+    </footer>
+</body>
+</html>
+                    
